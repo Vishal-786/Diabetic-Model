@@ -1,8 +1,9 @@
 streamlit==1.15.0
 tensorflow==2.19.0
 numpy<2.2.0,>=1.26.0
-scikit-learn==1.0.2
 rich>=10.14.0
 markdown-it-py>=2.2.0
 pygments>=2.13.0
 mdurl==0.1.2
+scikit-learn>=1.1.0
+

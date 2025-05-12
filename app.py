@@ -14,11 +14,11 @@ with open('Scaler.pkl', 'rb') as f:
 
 
 Pregnancies   = st.number_input('Pregnancy Month',min_value=0,max_value=9)
-Glucose       = st.number_input('Glucose',min_value=0,step=0.01)
-BloodPressure = st.number_input('Blood Pressure',min_value=15,max_value=315,step=0.01)
-SkinThickness = st.number_input('Skin Thickness',min_value=0,step=0.01)
-Insulin       = st.number_input('Insulin',min_value=0,step=0.01)
-BMI           = st.number_input('BMI',min_value=0,step=0.01)
+Glucose       = st.number_input('Glucose',min_value=0.0,step=0.01)
+BloodPressure = st.number_input('Blood Pressure',min_value=15.0,max_value=315,step=0.01)
+SkinThickness = st.number_input('Skin Thickness',min_value=0.0,step=0.01)
+Insulin       = st.number_input('Insulin',min_value=0.0,step=0.01)
+BMI           = st.number_input('BMI',min_value=0.0,step=0.01)
 DPF           = st.number_input('Diabetes Pedigree Function',min_value=0.0,max_value = 1.5,step=0.01,help="The DiabetesPedigreeFunction is a continuous value that represents the family history of diabetes. It measures the likelihood of a person developing diabetes based on their genetic history.")
 Age           = st.number_input('Age',min_value=0,max_value=125) 
 

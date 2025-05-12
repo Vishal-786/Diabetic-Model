@@ -1,5 +1,7 @@
 streamlit==1.16.0
-tensorflow==2.18.0  # or 2.18.1
+altair==4.2.2
 numpy
 pandas
 scikit-learn
+tensorflow
+# ... other packages

@@ -1,14 +1,15 @@
 import streamlit as st
 import joblib
 import numpy as np
+import pickle
 
 
 st.set_page_config('Predict Diabetes Patient')
 
 st.title('🩺🔬 Diabetes Prediction')
 
-sc = joblib.load('Scaler.pkl')
-model = joblib.load('Model.pkl')
+sc = pickle.load('Scaler.pkl','rb')
+model = pickle.load('Model.pkl','rb')
 
 Pregnancies   = st.number_input('Pregnancy Month',min_value=0,max_value=9)
 Glucose       = st.number_input('Glucose',min_value=0)

@@ -1,9 +1,6 @@
 streamlit==1.16.0
-altair==4.2.2
-numpy==1.23.1
-pandas==1.5.0
-scikit-learn==1.0.2
-tensorflow==2.18.0
-keras==3.8.0
-pickle5
-# Add other packages as needed
+tensorflow==2.18.0  # or 2.18.1
+numpy
+pandas
+scikit-learn
+picle5

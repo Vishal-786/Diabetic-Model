@@ -1,15 +1,14 @@
 import streamlit as st
 import pickle
 import numpy as np
-
+from tensorflow.keras.models import load_model
 
 st.set_page_config('Predict Diabetes Patient')
 
 st.title('🩺🔬 Diabetes Prediction')
 
-with open('Model.pkl', 'rb') as file:
-    model = pickle.load(file)
-    
+model = load_model('Model.h5')
+
 with open('Scaler.pkl', 'rb') as f:
     sc = pickle.load(f)
 
@@ -33,10 +32,9 @@ if st.button('Predict'):
     arr = sc.transform(arr)
     pred = model.predict(arr)
 
-    value = pred > 0.5
+    value = pred[0] > 0.5
 
     if(value==1):
         st.warning('🚫 Diabetic')
     else:
         st.success('💪 Not Diabetic')
-

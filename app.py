@@ -13,7 +13,7 @@ with open('Scaler.pkl', 'rb') as f:
     sc = pickle.load(f)
 
 
-Pregnancies   = st.number_input('Pregnancy Month',min_value=0,max_value=9,step=0.01)
+Pregnancies   = st.number_input('Pregnancy Month',min_value=0,max_value=9)
 Glucose       = st.number_input('Glucose',min_value=0,step=0.01)
 BloodPressure = st.number_input('Blood Pressure',min_value=15,max_value=315,step=0.01)
 SkinThickness = st.number_input('Skin Thickness',min_value=0,step=0.01)

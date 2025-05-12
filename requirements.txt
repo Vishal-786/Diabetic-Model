@@ -1,4 +1,8 @@
 streamlit
 tensorflow
 numpy
+<<<<<<< HEAD
 pickle
+=======
+pickle5
+>>>>>>> 3b42031bcdf2332d6e632361efbda9b0e31de1bb

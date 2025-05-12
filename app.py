@@ -7,8 +7,13 @@ st.set_page_config('Predict Diabetes Patient')
 
 st.title('🩺🔬 Diabetes Prediction')
 
-sc = joblib.load('Scaler.pkl')
-model = joblib.load('Model.pkl')
+import os
+model_path = os.path.join(os.getcwd(), "Model.pkl")
+sc_path = os.path.join(os.getcwd(), "Scaler.pkl")
+
+model = joblib.load(model_path)
+sc = joblib.load(sc_path)
+
 
 Pregnancies   = st.number_input('Pregnancy Month',min_value=0,max_value=9)
 Glucose       = st.number_input('Glucose',min_value=0)

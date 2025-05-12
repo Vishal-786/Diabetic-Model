@@ -7,8 +7,11 @@ st.set_page_config('Predict Diabetes Patient')
 
 st.title('🩺🔬 Diabetes Prediction')
 
-model = pickle.load('Model.pkl','rb')
-sc = pickle.load('Scaler.pkl','rb')
+with open('Model.pkl', 'rb') as file:
+    model = pickle.load(file)
+    
+with open('Scaler.pkl', 'rb') as f:
+    sc = pickle.load(f)
 
 
 Pregnancies   = st.number_input('Pregnancy Month',min_value=0,max_value=9)
